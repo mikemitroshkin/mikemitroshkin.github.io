@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mike's Portfolio - Эффективный http-сервер из командной строки</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/fi/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/fi/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/fi/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/fi/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/fi/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/fi/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/fi/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/fi/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/fi/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./assets/images/fi/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/fi/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./assets/images/fi/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/fi/favicon-16x16.png">
+	<link rel="manifest" href="./assets/images/fi/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta property="og:url"				content="https://blackhoundlabs.github.io/npm_http_server_ru" />
+	<meta property="og:type"			content="article" />
+	<meta property="og:title"			content="Эффективный http-сервер из командной строки" />
+	<meta property="og:description"		content="Простое решение для локального сервера - http-server." />
+	<meta property="article:author"		content="https://www.facebook.com/mike.murmansk" />
+	<meta property="og:site_name"		content="https://blackhoundlabs.github.io" />
+	<meta property="og:image"			content="https://blackhoundlabs.github.io/assets/images/npm_http_server_fb_post.jpg" />
+	<meta property="fb:app_id"			content="837986712996428" />
+
+</head>
+
+<body>
+
+<div id="ajaxContainer" class="blogContainer">
+	<header class="blogHeader">
+		<nav>
+
+			<a href="/" class="backArrow gray"></a>
+
+			<ul>
+				<!-- <li><a href="/">работа</a></li>
+				<li><a href="#">блог</a></li>
+				<li><a href="#">автор</a></li> -->
+			</ul>
+		</nav>
+
+		<h1>Эффективный http-сервер из командной строки</h1>
+
+		<img src="./assets/images/blog.png" class="label" alt="Blog">
+		<span class="author">&copy; Митрошкин Михаил</span>
+	</header>
+
+	<article>
+		<h2>Share:</h2>
+		<aside class="social">
+			<ul class="lang">
+				<li><span class="ru active"></span></li>
+				<li><a href="npm_http_server" class="en"></a></li>
+			</ul>
+			<ul class="share">
+				<li><a href="http://vk.com/share.php?url=https://blackhoundlabs.github.io/npm_http_server&image=https://blackhoundlabs.github.io/assets/images/npm_http_server_vk_post_.jpg&title=Эффективный http-сервер из командной строки&description=Простое решение для локального сервера - http-server&noparse=true" target="_blank" class="vk"></a></li>
+				<li><a href="https://linkedin.com/in/mitroshkinmike" class="linkedin" target="_blank"></a></li>
+				<li><a href="http://www.facebook.com/sharer/sharer.php?u=https://blackhoundlabs.github.io/npm_http_server_ru" class="facebook" target="_blank"></a></li>
+				<li class=""><a href="https://twitter.com/intent/tweet?text=Эффективный http-сервер из командной строки by Mike Mitroshkin&url=http://blackhoundlabs.github.io/npm_http_server_ru&hashtags=Webdesign&via=blackhoundlabs" class="twitter"></a></li>
+
+			</ul>
+		</aside>
+		<p>Допустим, в вашей фронт-разработке используется некоторое количество AJAX-запросов. Проверяя локально всю масштабность вашей задумки, вы с большой вероятностью наткнётесь на ошибки. По причинам безопасности доступ к файловой системе через javascript ограничен. Как иначе, ведь кто-то может добраться до секретных ингридиентов ваших рецептов благополучия. Сегодняшние браузеры используют технологию совместного использования ресурсов CORS (Cross-origin resource sharing), которая и является гарантом безопасности, а также появления ошибок при локальном тестировании.</p>
+		<p>Поэтому очевидно, что при проверке работоспособности таких скриптов лучше использовать реальную серверную топографию. И вариантов исполнения здесь множество. Можно закинуть файлы на свой сервер и протестировать. Можно решить свою задачу с помощью локального сервера.</p>
+		<p>По-подробнее рассмотрим второй вариант. Установка сервера локально может стать трудоёмким и затяжным процессом. Да и к тому же, не всегда рационально проделать огромное количество операций и углубиться в настройки, лишь для того, чтобы рассмотреть детали отклика малюсенького скриптика.</p>
+		<p>И, вуаля, есть не уникальное, но очень простое решение - элементарный http-server из командной строки.</p>
+
+		<code>
+			<pre>> http-server</pre>
+		</code>
+
+		<p>Эта маленькая строчка позволит вам мнгновенно включить небольшой локальный http-сервер, с помощью которого можно без труда тестировать, разрабатывать и обучаться новым приёмам.</p>
+		<p>Если у вас еще не установлен NPM, то вам сюда: <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a></p>
+		<p>Если уже есть, в командной строке набираем:</p>
+
+		<code>
+			<pre>> npm http-server install -g</pre>
+		</code>
+
+		<p>Устанавливаем сервер глобально <i>-g</i>, для того, чтобы в дальнейшем можно было запускать его простой командой.</p>
+		<p>Готово. Теперь заходим в папку с нашим проектом и пишем команду:</p>
+
+		<code>
+			<pre>> http-server</pre>
+		</code>
+
+		<p>Теперь в браузере набираем <i>localhost:8080</i> и развлекаемся со своим приложением. По умолчанию сервер обращается к индексовой странице папки из-под которой запускается, либо к подпапке <i>public</i>, а также на порту <i>8080</i>. Конечно же, параметры запуска можно изменить и настроить по своtq необходимости:</p>
+
+		<code>
+			<pre>> http-server [path] [options]</pre>
+		</code>
+
+		<p><i>-p</i> - порт (по умолчанию 8080)</p>
+		<p><i>-a</i> - адрес (по умолчанию 0.0.0.0)</p>
+		<p><i>-e</i> - расширение для файлов (по умолчанию .html)</p>
+		<p><i>-s --silent</i> - не выводит логи в консоли</p>
+		<p><i>-o</i> - открыть окно браузера сразу после запуска сервера</p>
+		<p><i>-h</i> - помощь</p>
+
+		<p>Другие настройки можно найти у разработчиков: <a href="https://github.com/indexzero/http-server" target="_blank">https://github.com/indexzero/http-server</a>, <a href="https://www.npmjs.com/package/http-server" target="_blank">https://www.npmjs.com/package/http-server</a></p>
+		<!-- <img src="./assets/images/npm_http_server_1x800.jpg" alt="Эффективный http-сервер из командной строки"> -->
+	</article>
+</div>
+
+	<script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script defer type="text/javascript" src="./assets/plugins/fixedmenu_blog.js"></script>
+	<script defer type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+
+</body>
+
+	<link rel="stylesheet" type="text/css" href="./assets/blog.css">
+	<link rel="stylesheet" type="text/css" href="./assets/work_self.css">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,500&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+</html>

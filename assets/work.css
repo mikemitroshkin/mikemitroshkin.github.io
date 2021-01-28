@@ -1,0 +1,424 @@
+
+/* text styles for screens */
+@media only screen and (max-width: 330px) {
+	.workContainer .social ul.share {
+		width: 5rem;
+	}
+	.workContainer .social {
+		height: 3rem;
+	}
+}
+
+	@media only screen and (min-width: 331px) {
+		.workContainer .social {
+			height: 2rem;
+		}
+	}
+
+@media only screen and (min-width: 331px) and (max-width: 400px) {
+	.workContainer .social ul.share {
+		width: auto;
+	}
+}
+
+
+@media only screen and (max-width: 400px) {
+	.workContainer h1 {
+		font-size: 1.7rem;
+		text-align: right;
+		margin: 3rem 2rem .8rem 6rem;
+	}
+	
+	.workContainer h2 {
+		font-size: .875rem;
+		font-weight: 400;
+		margin: 1rem 0 .5rem 2rem;
+	}
+	.workContainer q	 {
+		font-size: .875rem;
+		font-weight: 400;
+		margin: 1rem 0 .5rem 2rem;
+	}
+	.workContainer p {
+		font-size: 1rem;
+    	line-height: 1.5rem;
+		margin: 1.5rem 2rem;
+	}
+	.workContainer .worktype, .workContainer .author {
+		margin: .3rem 2rem 0 6rem;
+		text-align: right;
+	}
+	.workContainer .social ul.lang {
+    	right: 2rem;
+    	top: -1.6rem;
+	}
+	.workContainer .social ul.share {
+		left: 6rem;
+		top: -1.6rem;
+	}
+	.workContainer nav ul {
+		right: 2rem;
+	}
+	.workContainer nav ul li:nth-child(2) a {
+	    margin: 0 .8rem;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 533px) {
+	.workContainer h1 {
+		font-size: 1.7rem;
+		text-align: right;
+		margin: 0 2rem .8rem 8rem;
+	}
+	.workContainer h2 {
+		font-size: .875rem;
+		font-weight: 400;
+		margin: 1rem 0 .5rem 2rem;
+	}
+	.workContainer p {
+		font-size: 1rem;
+		line-height: 1.4rem;
+		margin: 1.5rem 2rem;
+	}
+	.workContainer .author, .workContainer .worktype {
+		margin: 0 2rem 0 6rem;
+		text-align: right;
+	}
+	.workContainer .social ul.lang {
+    	right: 2rem;
+    	top: -1.7rem;
+	}
+	.workContainer .social ul.share {
+		left: 6rem;
+		top: -1.4rem;
+	}
+	.workContainer nav ul {
+		top: -2rem;
+		right: 2rem;
+	}
+	.workContainer nav ul li:nth-child(2) a {
+	    margin: 0 .8rem;
+	}
+}
+
+@media only screen and (min-width: 534px) and (max-width: 640px) {
+	.workContainer h1 {
+		font-size: 1.7rem;
+		text-align: left;	
+		margin: 0 4rem .3rem 8rem;
+	}
+	.workContainer h2 {
+		font-size: .875rem;
+		font-weight: 400;
+		margin: 1rem 0 .5rem 4rem;
+	}
+	.workContainer p {
+		font-size: 1rem;
+	    line-height: 1.4rem;
+	    margin: 1.5rem 4rem;
+	}
+	.workContainer .author, .workContainer .worktype {
+		margin: 0 2rem 0 8rem;
+		text-align: left;
+	}
+	.workContainer .social ul.lang {
+    	right: 4rem;
+    	top: -1.7rem;
+	}
+	.workContainer .social ul.share {
+		left: 8rem;
+    	top: -1.4rem;
+	}
+	.workContainer nav ul {
+		top: -2rem;
+		right: 4rem;
+	}
+	.workContainer nav ul li:nth-child(2) a {
+		margin: 0 .8rem;
+	}
+}
+
+@media only screen and (min-width: 641px) {
+	.workContainer h1 {
+		font-size: 1.25rem;
+		margin: 0 4rem 0 8rem;
+	}
+	.workContainer h2 {
+		font-size: .875rem;
+		font-weight: 400;
+		margin: 1rem 0 .5rem 8rem;
+	}
+	.workContainer p {
+		font-size: .875rem;
+	    line-height: 1.3rem;
+	    margin: 1.5rem 4rem 1.5rem 8rem;
+	}
+	.workContainer .author, .workContainer .worktype {
+		margin: .3rem 2rem 0 8rem;
+		text-align: left;
+	}
+	.workContainer .social ul.lang {
+    	right: 4rem;
+    	top: -1.7rem;
+	}
+	.workContainer .social ul.share {
+		left: 11rem;
+    	top: -1.4rem;
+	}
+	.workContainer nav ul {
+		top: -2rem;
+		right: 4rem;
+	}
+	.workContainer nav ul li:nth-child(2) a {
+		margin: 0 .8rem;
+	}
+}
+
+
+/* behavior for large and small screens only */
+
+@media only screen and (max-width: 400px) {
+	.workContainer {
+		padding: 1rem 0 0 0;
+	}
+
+	.workContainer .backArrow {
+		top: 0;
+    	left: 2rem;
+	}
+	.workContainer .label {
+	        top: 4rem;
+		left: 1.8rem;
+		width: 32px;
+		height: 32px;
+	}
+	.workContainer .social .twitter, .workContainer .social .facebook, .workContainer .social .linkedin {
+		background-size: 24px 24px;
+		width: 24px;
+		height: 24px;
+	}
+	.workContainer .social ul li {
+		display: inline-block;
+		margin: 0 .5rem .5rem 0;
+	}
+	ul.lang li {
+		margin: 0;
+	}
+	ul.lang li:last-child {
+		margin: 0 0 0 .5rem;
+	}
+}
+
+@media only screen and (min-width: 401px) {
+	.workContainer {
+	    padding: 3rem 0 0 0;
+	}
+
+	.workContainer .backArrow {
+	    	top: 0;
+    		left: 1.5rem;
+	}
+	.workContainer .label {
+		top: 2.7rem;
+		left: 5rem;
+		width: 24px;
+		height: 32px;
+	}
+	.workContainer .social .twitter, .workContainer .social .facebook, .workContainer .social .linkedin {
+		background-size: 16px 16px;
+		width: 16px;
+		height: 16px;
+	}
+	.workContainer .social ul li {
+		display: inline-block;
+		margin: 0 .5rem 0 0;
+	}
+}
+
+/* fixed menu styles */
+
+@media only screen and (max-width: 532px) {
+	.workContainer a.backArrow.fixed {
+		left: 2rem;
+	}
+	.workContainer ul.fixed {
+		right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 533px) {
+	.workContainer a.backArrow.fixed {
+		left: 4rem;
+	}
+	.workContainer ul.fixed {
+		right: 4rem;
+	}
+}
+
+	.workContainer nav.fixed {
+		position: fixed;
+		max-width: 800px;
+		width: 100%;
+		background-color: #fff;
+		height: 2.5rem;
+		top: 0rem;
+		border-bottom: 2px solid #eee;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		z-index: 15;
+	}
+	.workContainer a.backArrow.fixed {
+		top: 0.5rem;
+	    position: absolute;
+	}
+	.workContainer ul.fixed {
+		top: 0.5rem;
+	    position: absolute;
+	}
+
+
+
+/* main styles */
+	.workContainer {
+		margin: 0 auto;
+		max-width: 800px;
+		position: relative;
+		background-color: #fff;
+	}
+
+/* styles for navigation */
+
+	.workContainer nav	{
+		position: absolute;
+		right: 0;
+		width: 100%;
+		height: 2rem;
+	}	
+		.workContainer .backArrow {
+			background: url(./images/arrow-left.svg) no-repeat;
+			background-size: 24px 24px;
+			width: 24px;
+			height: 24px;
+			display: block;
+			position: absolute;
+			z-index: 10;
+		}
+		.workContainer nav ul {
+			padding: 0;
+			margin: 0;
+			position: absolute;
+		}
+		.workContainer nav ul li {
+			display: inline-block;
+		}
+		.workContainer nav ul li a {
+			text-decoration: none;
+			font-size: .875rem;
+			font-weight: 500;
+			color: #ffa836;
+		}
+		.workContainer .social ul {
+			padding: 0;
+			margin: 0;
+		}
+		.workContainer .social ul li {
+			display: inline-block;
+			/*margin: 0 .5rem 0 0;*/
+		}
+		.workContainer .social ul li a, .workContainer .social ul li span {
+			display: block;
+		}
+		.workContainer .social .twitter, .workContainer .social .linkedin, .workContainer .social .facebook {
+			background-repeat: no-repeat;
+		}
+		.workContainer .social .facebook {
+			background-image: url(./images/fb.svg);
+		}
+		.workContainer .social .linkedin {
+			background-image: url(./images/li.svg);
+		}
+		.workContainer .social .twitter {
+			background-image: url(./images/tw.svg);
+		}
+
+
+/* styles for content */
+
+	.workContainer h1 {
+		font-weight: 500;
+		color: #ffa836;
+		word-wrap: break-word;
+	}
+	.workContainer .label {
+		position: absolute;
+		width: inherit;
+	}
+	.workContainer .worktype {
+		font-size: .875rem;
+		display: block;
+		font-weight: 500;
+	}
+	.workContainer .author {
+		display: block;
+		font-size: .75rem;
+    		font-weight: 400;
+	}
+	.workContainer .social {
+		position: relative;
+	}
+	.workContainer .social ul {
+		position: absolute;
+	}
+	.workContainer .social ul.lang {
+		float: right;
+    	text-align: right;
+	}
+	.workContainer .social ul.share {
+	    text-align: left;
+	}
+	.workContainer .social ul.lang li {
+		margin: 0;
+	}
+	.social .lang .en.active {
+		background: url("./images/lang_icons_shadow.png");
+		width: 23px;
+		height: 23px;
+		background-position: 0 0;
+	}
+	.social .lang a.en {
+		background: url("./images/lang_icons_shadow.png");
+		width: 23px;
+		height: 23px;
+		background-position: -25px 0;
+	}
+	.social .lang .ru.active {
+		background: url("./images/lang_icons_shadow.png");
+		width: 23px;
+		height: 23px;
+		background-position: 0 23px;
+	}
+	.social .lang a.ru {
+		background: url("./images/lang_icons_shadow.png");
+		width: 23px;
+		height: 23px;
+		background-position: -25px 23px;
+	}
+	.workContainer p {
+		font-weight: 400;
+		white-space: pre-line;
+		word-wrap: break-word;
+	}
+	.workContainer img {
+		width: 100%;
+		display: block;
+	}
+	.workContainer img.gif {
+		position: absolute;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	.workContainer iframe {
+		display: block;
+	}

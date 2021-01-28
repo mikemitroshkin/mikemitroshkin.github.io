@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+body, html {
+	height: 100%;
+	font-family: Ubuntu, Calibri, sans-serif;
+	font-size: 16px;
+	color: #484848;
+	background-color: #f7f7f7;
+	margin: 0;
+}
+.workContainer, .blogContainer {
+	box-shadow: 2px 0px 15px #e7e7e7, -2px 0px 15px #e7e7e7;
+}
